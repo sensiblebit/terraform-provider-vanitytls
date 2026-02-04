@@ -238,7 +238,3 @@ provider_installation {
 - `Sensitive: true` - private keys
 - Custom validators: `validator.String` interface
 - Custom plan modifiers: `planmodifier.Int64` interface
-
-## License
-
-MPL-2.0
