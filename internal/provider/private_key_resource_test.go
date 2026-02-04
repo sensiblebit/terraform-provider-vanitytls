@@ -160,9 +160,6 @@ func TestNewPrivateKeyResource(t *testing.T) {
 	if r == nil {
 		t.Error("NewPrivateKeyResource returned nil")
 	}
-	if _, ok := r.(resource.Resource); !ok {
-		t.Error("NewPrivateKeyResource does not implement resource.Resource")
-	}
 }
 
 func TestPrivateKeyResourceMetadata(t *testing.T) {

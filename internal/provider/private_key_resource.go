@@ -300,7 +300,7 @@ func computeSKID(pub crypto.PublicKey) string {
 	der, _ := x509.MarshalPKIXPublicKey(pub)
 
 	var spki subjectPublicKeyInfo
-	asn1.Unmarshal(der, &spki)
+	_, _ = asn1.Unmarshal(der, &spki) // Error ignored: der is valid PKIX from x509.MarshalPKIXPublicKey
 
 	hash := sha256.Sum256(spki.SubjectPublicKey.Bytes)
 	return hex.EncodeToString(hash[:20])
